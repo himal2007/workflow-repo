@@ -1,0 +1,17 @@
+name: Hello World Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-custom-action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Custom Action
+        uses: himal2007/custom-action-repo@main
